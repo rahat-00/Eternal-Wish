@@ -16,18 +16,26 @@
     <audio id="typeSound" src="https://www.soundjay.com/communication/typewriter-key-1.mp3"></audio>
 
     <div class="premium-card">
-        <div id="messageDisplay">
-            <h1 id="wishTitle" class="wish-header"></h1>
-            <div class="gold-divider"></div>
+        <div id="messageDisplay" class="hidden">
+            <h1 id="wishTitle" class="main-heading"></h1>
+            <div class="line-divider"></div>
             <p id="typewriterText" class="wish-text"></p>
             <span id="displaySender" class="signature"></span>
         </div>
         
         <div id="countdownDisplay" class="hidden">
-            <h2 class="gold-text">Your special day is approaching...</h2>
-            <div id="timer" class="timer-display"></div>
+            <p class="pre-title">THE ANTICIPATION</p>
+            <h2 class="gold-text" style="font-size: 2rem;">Almost Time...</h2>
+            <div class="line-divider"></div>
+            <p style="margin-bottom: 20px; font-weight: 300;">Your surprise is locked. It will reveal itself in:</p>
+            
+            <div id="timer" class="timer-grid">
+                </div>
+            
+            <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.6;">Check back exactly on your birthday!</p>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
