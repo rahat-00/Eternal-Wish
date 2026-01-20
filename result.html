@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Reveal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="bg-elements" id="particleContainer"></div>
+    
+    <audio id="birthdayMusic" loop>
+        <source src="Happy Birthday.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="typeSound" src="https://www.soundjay.com/communication/typewriter-key-1.mp3"></audio>
+
+    <div class="premium-card">
+        <div id="messageDisplay">
+            <h1 id="wishTitle" class="wish-header"></h1>
+            <div class="gold-divider"></div>
+            <p id="typewriterText" class="wish-text"></p>
+            <span id="displaySender" class="signature"></span>
+        </div>
+        
+        <div id="countdownDisplay" class="hidden">
+            <h2 class="gold-text">Your special day is approaching...</h2>
+            <div id="timer" class="timer-display"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

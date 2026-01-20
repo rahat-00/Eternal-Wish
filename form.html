@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Identity</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-elements" id="particleContainer"></div>
+
+    <div class="premium-card">
+        <h2 class="form-title">Identify <span class="gold-text">Yourself</span></h2>
+        
+        <form id="celebrationForm" class="form-grid">
+            <div class="input-group full">
+                <input type="text" id="fullName" placeholder=" " required>
+                <label>Your Full Name</label>
+            </div>
+
+            <div class="input-group">
+                <input type="date" id="dob" required>
+                <label class="static-label">Birth Date</label>
+            </div>
+
+            <div class="input-group">
+                <input type="number" id="age" placeholder=" " required>
+                <label>Age</label>
+            </div>
+
+            <div class="input-group full">
+                <select id="relationship" required>
+                    <option value="" disabled selected hidden></option>
+                    <option value="Friend">Friend</option>
+                    <option value="Best Friend">Best Friend</option>
+                    <option value="Boyfriend">Boyfriend</option>
+                    <option value="Girlfriend">Girlfriend</option>
+                    <option value="Mother">Mother</option>
+                    <option value="Father">Father</option>
+                    <option value="Sister">Sister</option>
+                    <option value="Brother">Brother</option>
+                    <option value="Husband">Husband</option>
+                    <option value="Wife">Wife</option>
+                    <option value="Someone Special">Someone Special</option>
+                </select>
+                <label>Who shared this link?</label>
+            </div>
+
+            <div class="input-group full">
+                <input type="text" id="senderName" placeholder=" " required>
+                <label>Sender's Name</label>
+            </div>
+
+            <div class="full btn-container">
+                <button type="submit" class="liquid-btn" id="unlockBtn">
+                    <span>Unlock Secret Message</span>
+                    <div class="liquid-bg"></div>
+                </button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

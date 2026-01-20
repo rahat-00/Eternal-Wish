@@ -1,0 +1,104 @@
+/* Master Luxury Light Theme */
+:root {
+    --pearl: #fdfcfb;
+    --gold: #c5a059;
+    --gold-glow: rgba(197, 160, 89, 0.3);
+    --text-main: #3e3e3e;
+    --glass: rgba(255, 255, 255, 0.85);
+    --transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+
+body {
+    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex; justify-content: center; align-items: center;
+    overflow: hidden; position: relative;
+}
+
+/* --- Floating Gold Dust --- */
+.bg-elements { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+.particle {
+    position: absolute; background: var(--gold); border-radius: 50%;
+    opacity: 0.25; animation: floatParticle 12s infinite ease-in-out;
+}
+@keyframes floatParticle {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(30px, -60px); }
+}
+
+/* --- Premium Glass Card --- */
+.premium-card {
+    background: var(--glass);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    padding: 60px 45px;
+    border-radius: 12px;
+    width: 90%; max-width: 550px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.06);
+    z-index: 10; text-align: center;
+    animation: entrance 1s var(--transition);
+}
+
+@keyframes entrance {
+    from { opacity: 0; transform: translateY(40px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+h1, h2 { font-family: 'Cormorant Garamond', serif; font-style: italic; color: #1a1a1a; margin-bottom: 25px; }
+.gold-text { color: var(--gold); }
+
+/* --- Attractive Liquid Unlock Button --- */
+.btn-container { position: relative; margin-top: 35px; width: 100%; }
+
+.liquid-btn {
+    position: relative; width: 100%; padding: 22px;
+    background: transparent; border: 1px solid var(--gold);
+    color: var(--gold); text-transform: uppercase; letter-spacing: 5px;
+    font-weight: 600; font-size: 0.85rem; cursor: pointer;
+    overflow: hidden; transition: var(--transition); z-index: 1;
+}
+
+.liquid-bg {
+    position: absolute; top: 100%; left: 0; width: 100%; height: 100%;
+    background: var(--gold); transition: var(--transition); z-index: -1;
+}
+
+.liquid-btn:hover { color: white; transform: translateY(-5px); box-shadow: 0 15px 30px var(--gold-glow); }
+.liquid-btn:hover .liquid-bg { top: 0; }
+
+/* --- Form Page Styling --- */
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 20px; }
+.full { grid-column: span 2; }
+
+.input-group { position: relative; text-align: left; }
+input, select {
+    width: 100%; padding: 15px 5px; background: transparent;
+    border: none; border-bottom: 1.5px solid #d1d1d1;
+    font-size: 1rem; color: var(--text-dark); outline: none; transition: 0.3s;
+}
+
+.input-group label {
+    position: absolute; left: 5px; top: 15px; color: #aaa;
+    transition: 0.3s; pointer-events: none;
+}
+
+/* Floating Label Engine */
+input:focus ~ label, input:not(:placeholder-shown) ~ label,
+select:focus ~ label, select:valid ~ label {
+    top: -12px; font-size: 0.7rem; color: var(--gold); font-weight: 600; text-transform: uppercase;
+}
+
+input:focus { border-bottom: 1.5px solid var(--gold); }
+
+/* --- Wish Page Specifics --- */
+.wish-display { line-height: 2.2; font-size: 1.15rem; text-align: left; color: #555; margin-top: 20px; }
+.signature { 
+    font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; 
+    color: var(--gold); display: block; margin-top: 30px; 
+    animation: fadeIn 2s ease-in;
+}
+.hidden { display: none; }
